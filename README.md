@@ -34,7 +34,7 @@ https://pokemon-center.herokuapp.com
   
 ### Frontend
     
-	  1. HTML
+	1. HTML
   	2. CSS
   	3. ReactJS with Redux
     4. Styled Components

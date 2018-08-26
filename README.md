@@ -56,4 +56,4 @@ https://pokemon-center.herokuapp.com
 
 ## Editor
   
-  1. Sublime-Text
+  1. Visual Studio Code

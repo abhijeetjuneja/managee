@@ -23,7 +23,6 @@ class DashboardPage extends React.Component {
 
     render() {
         const { user } = this.state;
-        console.log(this.state);
         return (
             <Dashboard 
             user = {this.state.user}

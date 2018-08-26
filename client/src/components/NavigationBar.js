@@ -18,9 +18,16 @@ class NavigationBar extends React.Component {
 
   componentDidMount(){
       this.props.getUserInfoRequest().then((res) => {
-          this.setState({user : res.data.user});
+          this.setState({user : res.data.user, isLoading : true});
       }); 
   }
+
+  componentWillUpdate(){
+    this.props.getUserInfoRequest().then((res) => {
+      this.setState({user : res.data.user, isLoading : false});
+    }); 
+  }
+
 
   logout(e) {
     e.preventDefault();
@@ -30,10 +37,11 @@ class NavigationBar extends React.Component {
   render() {
     const { isAuthenticated } = this.props.auth;
     const { isAdmin } = this.state.user;
+    const { isLoading } = this.state;
     const userLinks = (
         <Navbar>
           <Navlink href="/"><Navhead>Managee</Navhead></Navlink>
-          <Navlist><Navlink onClick={this.logout.bind(this)}>Logout</Navlink></Navlist>
+          <Navlist><Navlink href="/login" onClick={this.logout.bind(this)}>Logout</Navlink></Navlist>
         </Navbar>
     );
 
@@ -55,10 +63,9 @@ class NavigationBar extends React.Component {
       </Navbar>
     );
 
-    return (     
-      <div>
-        { isAuthenticated ? (isAdmin ? adminLinks : userLinks) : guestLinks }      
-      </div>              
+    return (    
+        isAuthenticated ? (isAdmin ? adminLinks : userLinks) : guestLinks  
+                   
     );
   }
 }

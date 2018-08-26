@@ -27,7 +27,6 @@ class ManagePage extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         const { getUserInfoRequest, getUserListRequest, getUserEditRequest,userSignupRequest,isUserExists, getUserDeleteRequest } = this.props;
         if(!this.state.isLoading)
         return (

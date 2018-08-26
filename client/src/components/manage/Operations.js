@@ -85,7 +85,6 @@ class Operations extends React.Component {
     }
 
     addUser(){
-        console.log("add");
         this.setState({creation : true});
     }
 
@@ -100,8 +99,6 @@ class Operations extends React.Component {
     }
 
     editUser(user){
-        console.log(user);
-        console.log(this.state.editingUser);
         var user = {username : user.username, isAdmin : user.isAdmin, email : user.email};
         this.setState({editingUser : user, username : user.username, editing : true});
     }
@@ -125,7 +122,6 @@ class Operations extends React.Component {
 
     render() {
     const { userList,editingUser, editing, errors, creation, isLoading , showFailure , showSuccess } = this.state;
-    console.log(errors);
     if(creation){
         return (
             <OperationsContainer>

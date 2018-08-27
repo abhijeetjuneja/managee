@@ -128,11 +128,7 @@ module.exports.controllerFunction = function(app) {
                       res.status(401).json({ errors: { form: 'Invalid Credentials' } });
 
                   } else {
-                      console.log("Updated User");
-                      setTimeout(function(){ 
-                        res.status(200).json({message : 'Successfully Updated User'});
-                      }, 3000);
-                      
+                        res.status(200).json({message : 'Successfully Updated User'});                     
                   }
               });             
           }
@@ -150,9 +146,7 @@ module.exports.controllerFunction = function(app) {
            }
           else
           {
-            setTimeout(function(){ 
               res.status(200).json({message : 'Successfully Deleted User'});
-            }, 3000);
           }
     });//end remove
 

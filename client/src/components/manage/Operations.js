@@ -37,7 +37,7 @@ class Operations extends React.Component {
             username : '',
             editing : false,
             errors: {},
-            isLoading: false,
+            isLoading: true,
             invalid: false,
             creation: false
         };
@@ -136,7 +136,13 @@ class Operations extends React.Component {
         );
     }
     else
+    if(isLoading)
     return (
+        <div style={{height:'70vh'}}><Loader /></div>
+    );
+    else
+    return (
+
         <OperationsContainer>
             <SubHead>Admin Panel</SubHead>
             <hr style={{color : '#767576'}}/><br></br>

@@ -103,7 +103,7 @@ class LoginForm extends React.Component {
 
             <TextFieldGroup
               field="identifier"
-              label="Username / Email"
+              label="Email"
               value={identifier}
               error={errors.identifier}
               onChange={this.onChange}

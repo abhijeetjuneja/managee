@@ -96,7 +96,7 @@ class LoginForm extends React.Component {
         {showFailure ? <FailureMessage message = 'Log in'/> : null}
         {showSuccess ? <SuccessMessage message = 'Redirecting... Logged in'/> : null}
         <form>
-          <SubHead>Join Managee Now !</SubHead>
+          <SubHead>Log in to Managee</SubHead>
           <hr style={{color : '#767576'}}/><br></br>
           <div style={{margin:'0px 30px'}}>
             { errors.form && <div className="alert alert-danger" style={{color : 'red'}}><br />{errors.form}</div> }

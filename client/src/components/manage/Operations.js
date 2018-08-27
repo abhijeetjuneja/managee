@@ -145,8 +145,8 @@ class Operations extends React.Component {
         <OperationsContainer>
             <SubHead>Admin Panel</SubHead>
             <hr style={{color : '#767576'}}/><br></br>
-            {showFailure ? <FailureMessage message = 'Editing'/> : null}
-            {showSuccess ? <SuccessMessage message = 'Edited'/> : null}
+            {showFailure ? <FailureMessage message = 'Operation'/> : null}
+            {showSuccess ? <SuccessMessage message = 'Done'/> : null}
             <OperationsTable>
                 <tbody>
                 <OperationsRow>

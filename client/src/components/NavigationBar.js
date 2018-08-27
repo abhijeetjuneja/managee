@@ -22,7 +22,7 @@ class NavigationBar extends React.Component {
       }); 
   }
 
-  componentWillUpdate(){
+  componentWillReceiveProps(){
     this.props.getUserInfoRequest().then((res) => {
       this.setState({user : res.data.user, isLoading : false});
     }); 

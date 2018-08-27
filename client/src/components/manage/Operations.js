@@ -70,7 +70,7 @@ class Operations extends React.Component {
 
     componentWillMount(){
         this.props.getUserListRequest().then((res) => {
-            this.setState({userList : res.data.userList});
+            this.setState({userList : res.data.userList,isLoading : false});
         });
     }
 
@@ -138,11 +138,10 @@ class Operations extends React.Component {
     else
     if(isLoading)
     return (
-        <div style={{height:'70vh'}}><Loader /></div>
+        <div style={{margin:'35vh 0'}}><Loader /></div>
     );
     else
     return (
-
         <OperationsContainer>
             <SubHead>Admin Panel</SubHead>
             <hr style={{color : '#767576'}}/><br></br>

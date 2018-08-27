@@ -37,7 +37,7 @@ class Operations extends React.Component {
             username : '',
             editing : false,
             errors: {},
-            isLoading: true,
+            isPageLoading: true,
             invalid: false,
             creation: false
         };
@@ -70,7 +70,7 @@ class Operations extends React.Component {
 
     componentWillMount(){
         this.props.getUserListRequest().then((res) => {
-            this.setState({userList : res.data.userList,isLoading : false});
+            this.setState({userList : res.data.userList,isPageLoading : false});
         });
     }
 
@@ -121,7 +121,7 @@ class Operations extends React.Component {
     }
 
     render() {
-    const { userList,editingUser, editing, errors, creation, isLoading , showFailure , showSuccess } = this.state;
+    const { userList,editingUser, editing, errors, creation, isLoading, isPageLoading , showFailure , showSuccess } = this.state;
     if(creation){
         return (
             <OperationsContainer>
@@ -136,7 +136,7 @@ class Operations extends React.Component {
         );
     }
     else
-    if(isLoading)
+    if(isPageLoading)
     return (
         <div style={{margin:'35vh 0'}}><Loader /></div>
     );

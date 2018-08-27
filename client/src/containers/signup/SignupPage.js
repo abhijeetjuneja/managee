@@ -6,14 +6,14 @@ import PropTypes from 'prop-types';
 
 class SignupPage extends React.Component {
   render() {
-    const { userSignupRequest, addFlashMessage, isUserExists } = this.props;
+    const { userSignupRequest, isUserExists } = this.props;
     return (
       <div className="row" style={{margin:'0px 0px 0px 0px'}}>
         <div className="col-md-6 col-md-offset-3 col-xs-12">
           <SignupForm
             isUserExists={isUserExists}
             userSignupRequest={userSignupRequest}
-            addFlashMessage={addFlashMessage} />
+             />
         </div>
       </div>
     );
